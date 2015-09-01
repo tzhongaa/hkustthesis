@@ -9,11 +9,11 @@ ARCHIVE := hkustthesis.cls $(MAINOUT).tex $(MAINOUT).bib $(MAINCMP) $(wildcard $
 
 all: $(MAINOUT).pdf
 
-$(MAINOUT).pdf: $(FIGURES) $(CHAPTER) $(MAINOUT).tex
+$(MAINOUT).pdf: $(OUTSDIR) $(FIGURES) $(CHAPTER) $(MAINOUT).tex
 	rubber --into $(OUTSDIR) -m xelatex --shell-escape -q $(MAINOUT).tex
 	cp $(OUTSDIR)/$(MAINOUT).pdf .
 
-$(OUTSDIR)/%.aux: $(OUTSDIR) $(CHAPDIR)/%.tex
+$(OUTSDIR)/%.aux: $(CHAPDIR)/%.tex
 	touch $@
 
 $(FIGSDIR)/%.eps: $(FIGSDIR)/%.tex
