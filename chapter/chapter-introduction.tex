@@ -1,6 +1,33 @@
 \chapter{Introduction}
-\section{First Section}
-\subsection{First Subsection}
+\section{Directory Structure}
+\begin{enumerate}
+    \item {\bf hkustthesis.cls}: Styles
+    \item {\bf thesis.tex}: Main latex source
+    \item {\bf thesis.bib}: Bibtex source
+    \item {\bf chapter}: Directory to contain all chapters
+    \item {\bf figures}: Directory to contain all figures
+    \item {\bf Makefile}: Compile (via rubber), compress and archive
+\end{enumerate}
+
+\section{Compiling via Makefile}
+Compile the sources via rubber (\url{https://launchpad.net/rubber}):
+
+\textcolor{blue}{make}
+
+Compress the generated PDF:
+
+\textcolor{blue}{make thesis-compressed.pdf}
+
+Generate the compressed PDF and make zip archive:
+
+\textcolor{blue}{make zip}
+
+Clean the working directory:
+
+\textcolor{blue}{make clean}
+
+\section{Examples}
+\subsection{Subsection Example}
 Example of citation \cite{Chapman1970}
 
 Example of figure \ref{figure:figure_example}
