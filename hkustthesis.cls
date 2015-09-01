@@ -20,6 +20,7 @@
 \RequirePackage{graphicx}
 \RequirePackage[justification=raggedright]{subcaption}
 \RequirePackage[justification=raggedright]{caption}
+\RequirePackage[norefs,nocites,ignoreunlbld]{refcheck}
 
 %  ----  Paragraph style  ---------------------------
 \linespread{1.4} % one-and-a-half spacing
