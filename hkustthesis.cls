@@ -14,17 +14,12 @@
                 linkcolor=blue,
                 citecolor=blue,
                 urlcolor=blue]{hyperref}
-\RequirePackage[intoc]{nomencl}
 \RequirePackage{enumitem}
-\RequirePackage[norefs,nocites,ignoreunlbld]{refcheck}
-\RequirePackage[section]{placeins}
 \RequirePackage{multirow}
 \RequirePackage{amsmath,amsthm,amssymb}
 \RequirePackage{graphicx}
 \RequirePackage[justification=raggedright]{subcaption}
 \RequirePackage[justification=raggedright]{caption}
-
-\makenomenclature
 
 %  ----  Paragraph style  ---------------------------
 \linespread{1.4} % one-and-a-half spacing
