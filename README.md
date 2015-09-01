@@ -1,6 +1,6 @@
 Thesis template for HKUST.
 
-###Directory Structure###
+**Directory Structure**
 
  - **hkustthesis.cls**: Styles
  - **thesis.tex**: Main latex source
@@ -9,7 +9,7 @@ Thesis template for HKUST.
  - **figures**: Directory to contain all figures
  - **Makefile**: Compile (via rubber), compress and archive
 
-###Compiling via Makefile###
+**Compiling via Makefile**
 
 Compile the sources via rubber (https://launchpad.net/rubber):
 
