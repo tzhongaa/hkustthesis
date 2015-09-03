@@ -9,9 +9,9 @@ ARCHIVE := hkustthesis.cls $(MAINOUT).tex $(MAINOUT).bib $(MAINCMP) $(wildcard $
 
 all: $(MAINOUT).pdf
 
-$(MAINOUT).pdf: $(OUTSDIR) $(FIGURES) $(CHAPTER) $(MAINOUT).tex
-	rubber --warn all --into $(OUTSDIR) -m xelatex --shell-escape -q $(MAINOUT).tex
-	cp $(OUTSDIR)/$(MAINOUT).pdf .
+$(MAINOUT).pdf: %.pdf: %.tex $(OUTSDIR) $(FIGURES) $(CHAPTER)
+	rubber --warn all --into $(OUTSDIR) -m xelatex --shell-escape -q $<
+	cp $(OUTSDIR)/$@ .
 
 $(OUTSDIR)/%.aux: $(CHAPDIR)/%.tex
 	touch $@
@@ -21,7 +21,7 @@ $(FIGSDIR)/%.eps: $(FIGSDIR)/%.tex
 	pdftops -eps $(OUTSDIR)/$*.pdf $@
 
 $(MAINCMP): $(MAINOUT).pdf
-	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/printer -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$(MAINCMP) $(MAINOUT).pdf
+	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/printer -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$@ $<
 
 $(OUTSDIR):
 	mkdir -p $(OUTSDIR)
