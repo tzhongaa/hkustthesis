@@ -1,4 +1,4 @@
-Thesis template for HKUST.
+Thesis template for HKUST, licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
 
 **Directory Structure**
 
@@ -34,4 +34,3 @@ Clean the working directory:
 ```
 make clean
 ```
-
